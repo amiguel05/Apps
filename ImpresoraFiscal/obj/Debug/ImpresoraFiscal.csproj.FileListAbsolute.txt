@@ -1,0 +1,17 @@
+\\INF07\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\bin\Debug\ImpresoraFiscal.dll
+\\INF07\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\bin\Debug\ImpresoraFiscal.pdb
+\\INF07\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\bin\Debug\VmaxCom.dll
+\\INF07\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\obj\Debug\ImpresoraFiscal.csprojResolveAssemblyReference.cache
+\\INF07\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\obj\Debug\ImpresoraFiscal.dll
+\\INF07\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\obj\Debug\ImpresoraFiscal.pdb
+C:\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\bin\Debug\ImpresoraFiscal.dll
+C:\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\bin\Debug\ImpresoraFiscal.pdb
+C:\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\bin\Debug\VmaxCom.dll
+C:\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\obj\Debug\ImpresoraFiscal.csprojResolveAssemblyReference.cache
+C:\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\obj\Debug\ImpresoraFiscal.dll
+C:\Users\hsanchez\Source\Repos\OpeAgencias\ImpresoraFiscal\obj\Debug\ImpresoraFiscal.pdb
+C:\apps\OpeAgencias\ImpresoraFiscal\bin\Debug\ImpresoraFiscal.dll
+C:\apps\OpeAgencias\ImpresoraFiscal\bin\Debug\ImpresoraFiscal.pdb
+C:\apps\OpeAgencias\ImpresoraFiscal\obj\Debug\ImpresoraFiscal.dll
+C:\apps\OpeAgencias\ImpresoraFiscal\obj\Debug\ImpresoraFiscal.pdb
+C:\apps\OpeAgencias\ImpresoraFiscal\obj\Debug\ImpresoraFiscal.csprojResolveAssemblyReference.cache

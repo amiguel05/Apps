@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportarClientes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoAgencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsClientes">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeRetorno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportarClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImportarClientesResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeRetorno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportarEstadosPaquetesAgencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoAgencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dsDatos">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeRetorno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ImportarEstadosPaquetesAgenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ImportarEstadosPaquetesAgenciaResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="MensajeRetorno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListadoDeCargos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoAgencia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListadoDeCargosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListadoDeCargosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraeCodigoSecreto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Eps" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoAgencia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TraeCodigoSecretoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TraeCodigoSecretoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DatosDeProductos">
+        <s:complexType />
+      </s:element>
+      <s:element name="DatosDeProductosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DatosDeProductosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasAgencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoAgencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FacturasAgenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FacturasAgenciasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManifiestoAgencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoAgencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocCodigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FacNumero" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManifiestoAgenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ManifiestoAgenciasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListadoCargos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListadoCargosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListadoCargosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportarClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportarClientes" />
+  </wsdl:message>
+  <wsdl:message name="ImportarClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportarClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ImportarEstadosPaquetesAgenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:ImportarEstadosPaquetesAgencia" />
+  </wsdl:message>
+  <wsdl:message name="ImportarEstadosPaquetesAgenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:ImportarEstadosPaquetesAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListadoDeCargosSoapIn">
+    <wsdl:part name="parameters" element="tns:ListadoDeCargos" />
+  </wsdl:message>
+  <wsdl:message name="ListadoDeCargosSoapOut">
+    <wsdl:part name="parameters" element="tns:ListadoDeCargosResponse" />
+  </wsdl:message>
+  <wsdl:message name="TraeCodigoSecretoSoapIn">
+    <wsdl:part name="parameters" element="tns:TraeCodigoSecreto" />
+  </wsdl:message>
+  <wsdl:message name="TraeCodigoSecretoSoapOut">
+    <wsdl:part name="parameters" element="tns:TraeCodigoSecretoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DatosDeProductosSoapIn">
+    <wsdl:part name="parameters" element="tns:DatosDeProductos" />
+  </wsdl:message>
+  <wsdl:message name="DatosDeProductosSoapOut">
+    <wsdl:part name="parameters" element="tns:DatosDeProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="FacturasAgenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:FacturasAgencias" />
+  </wsdl:message>
+  <wsdl:message name="FacturasAgenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:FacturasAgenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ManifiestoAgenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:ManifiestoAgencias" />
+  </wsdl:message>
+  <wsdl:message name="ManifiestoAgenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:ManifiestoAgenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListadoCargosSoapIn">
+    <wsdl:part name="parameters" element="tns:ListadoCargos" />
+  </wsdl:message>
+  <wsdl:message name="ListadoCargosSoapOut">
+    <wsdl:part name="parameters" element="tns:ListadoCargosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsAgenciasSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportarClientes">
+      <wsdl:input message="tns:ImportarClientesSoapIn" />
+      <wsdl:output message="tns:ImportarClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportarEstadosPaquetesAgencia">
+      <wsdl:input message="tns:ImportarEstadosPaquetesAgenciaSoapIn" />
+      <wsdl:output message="tns:ImportarEstadosPaquetesAgenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListadoDeCargos">
+      <wsdl:input message="tns:ListadoDeCargosSoapIn" />
+      <wsdl:output message="tns:ListadoDeCargosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TraeCodigoSecreto">
+      <wsdl:input message="tns:TraeCodigoSecretoSoapIn" />
+      <wsdl:output message="tns:TraeCodigoSecretoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DatosDeProductos">
+      <wsdl:input message="tns:DatosDeProductosSoapIn" />
+      <wsdl:output message="tns:DatosDeProductosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FacturasAgencias">
+      <wsdl:input message="tns:FacturasAgenciasSoapIn" />
+      <wsdl:output message="tns:FacturasAgenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ManifiestoAgencias">
+      <wsdl:input message="tns:ManifiestoAgenciasSoapIn" />
+      <wsdl:output message="tns:ManifiestoAgenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListadoCargos">
+      <wsdl:input message="tns:ListadoCargosSoapIn" />
+      <wsdl:output message="tns:ListadoCargosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsAgenciasSoap" type="tns:wsAgenciasSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportarClientes">
+      <soap:operation soapAction="http://tempuri.org/ImportarClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportarEstadosPaquetesAgencia">
+      <soap:operation soapAction="http://tempuri.org/ImportarEstadosPaquetesAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListadoDeCargos">
+      <soap:operation soapAction="http://tempuri.org/ListadoDeCargos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraeCodigoSecreto">
+      <soap:operation soapAction="http://tempuri.org/TraeCodigoSecreto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosDeProductos">
+      <soap:operation soapAction="http://tempuri.org/DatosDeProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasAgencias">
+      <soap:operation soapAction="http://tempuri.org/FacturasAgencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManifiestoAgencias">
+      <soap:operation soapAction="http://tempuri.org/ManifiestoAgencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListadoCargos">
+      <soap:operation soapAction="http://tempuri.org/ListadoCargos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAgenciasSoap12" type="tns:wsAgenciasSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportarClientes">
+      <soap12:operation soapAction="http://tempuri.org/ImportarClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportarEstadosPaquetesAgencia">
+      <soap12:operation soapAction="http://tempuri.org/ImportarEstadosPaquetesAgencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListadoDeCargos">
+      <soap12:operation soapAction="http://tempuri.org/ListadoDeCargos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraeCodigoSecreto">
+      <soap12:operation soapAction="http://tempuri.org/TraeCodigoSecreto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DatosDeProductos">
+      <soap12:operation soapAction="http://tempuri.org/DatosDeProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FacturasAgencias">
+      <soap12:operation soapAction="http://tempuri.org/FacturasAgencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManifiestoAgencias">
+      <soap12:operation soapAction="http://tempuri.org/ManifiestoAgencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListadoCargos">
+      <soap12:operation soapAction="http://tempuri.org/ListadoCargos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsAgencias">
+    <wsdl:port name="wsAgenciasSoap" binding="tns:wsAgenciasSoap">
+      <soap:address location="http://192.168.150.1/WebAgencias/wsAgencias.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAgenciasSoap12" binding="tns:wsAgenciasSoap12">
+      <soap12:address location="http://192.168.150.1/WebAgencias/wsAgencias.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

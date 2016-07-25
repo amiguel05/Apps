@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <PublishUrlHistory>\\192.168.199.15\ope agencias\|\\epsintag\ope agencias\|\\epsintag\ope agencias\ope agencias prueba\|http://192.168.199.15/Ope Agencias/Ope Agencias Prueba/|http://192.168.199.15/Ope Agencias/</PublishUrlHistory>
+    <InstallUrlHistory>\\epsintag\ope agencias\</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>http://localhost/OpeAgencia2/</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

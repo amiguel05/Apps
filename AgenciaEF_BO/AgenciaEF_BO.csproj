@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F997B678-8BCE-48E9-9615-015C924A2435}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AgenciaEF_BO</RootNamespace>
+    <AssemblyName>AgenciaEF_BO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.2\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\CalculoTafiras.cs" />
+    <Compile Include="BO\Facturar.cs" />
+    <Compile Include="DAL\ADO\Acceso.cs" />
+    <Compile Include="DAL\ADO\BultosDAL.cs" />
+    <Compile Include="DAL\ADO\ClientesDAL.cs" />
+    <Compile Include="DAL\CargosSucursalesRepository.cs" />
+    <Compile Include="DAL\RegistroLibrasGratisRepository.cs" />
+    <Compile Include="DAL\LibrasGratisRepository.cs" />
+    <Compile Include="DAL\BultosEnviosRepository.cs" />
+    <Compile Include="DAL\CorrespondenciaRepository.cs" />
+    <Compile Include="DAL\dsReportes.cs">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\SecuencialesRepository.cs" />
+    <Compile Include="DAL\TarifasEspecialesValoresRepository.cs" />
+    <Compile Include="DAL\TarifasEspecialesRepository.cs" />
+    <Compile Include="DAL\TerminalRepository.cs" />
+    <Compile Include="DAL\dsReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TarifaEnvioZonaRepository.cs" />
+    <Compile Include="DAL\TarifaEnvioRepository.cs" />
+    <Compile Include="DAL\EnviosRepository.cs" />
+    <Compile Include="DAL\CargosVariosRepository.cs" />
+    <Compile Include="DAL\PagosRecibosRepository.cs" />
+    <Compile Include="DAL\PagosRepository.cs" />
+    <Compile Include="DAL\MovCajaRecibosRepository.cs" />
+    <Compile Include="DAL\NumeroFiscalRepository.cs" />
+    <Compile Include="DAL\DatosPagoRepository.cs" />
+    <Compile Include="DAL\dsFactura.cs">
+      <DependentUpon>dsFactura.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\dsFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MovCajaRepository.cs" />
+    <Compile Include="DAL\RecibosDet.cs" />
+    <Compile Include="DAL\Recibos.cs" />
+    <Compile Include="DAL\vwCuadreCajaRepository.cs" />
+    <Compile Include="DAL\vwUsuarioOpcionesRepository.cs" />
+    <Compile Include="DAL\vwBultosValoresRepository.cs" />
+    <Compile Include="DAL\EquivalenciaBultosRepository.cs" />
+    <Compile Include="DAL\BultosValoresRepository.cs" />
+    <Compile Include="DAL\BultosRepository.cs" />
+    <Compile Include="DAL\ClientesRepository.cs" />
+    <Compile Include="DAL\dsDatos.cs">
+      <DependentUpon>dsDatos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\dsDatos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDatos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\RolesOpcionesRepository.cs" />
+    <Compile Include="DAL\ParametrosSucursalRepository.cs" />
+    <Compile Include="DAL\UsuariosRolesRepository.cs" />
+    <Compile Include="DAL\UsuariosOpcionesRepository.cs" />
+    <Compile Include="DAL\UsuariosModulosRepository.cs" />
+    <Compile Include="DAL\CargosProductoRepository.cs" />
+    <Compile Include="DAL\RolesRepository.cs" />
+    <Compile Include="DAL\UsuarioSucursalRepository.cs" />
+    <Compile Include="DAL\UsuariosRepository.cs" />
+    <Compile Include="DAL\ModulosRepository.cs" />
+    <Compile Include="DAL\CargosValoresRepository.cs" />
+    <Compile Include="DAL\TasaCambioRepository.cs" />
+    <Compile Include="DAL\CargosRepository.cs" />
+    <Compile Include="DAL\ProductosRepository.cs" />
+    <Compile Include="DAL\EmpresasRepository.cs" />
+    <Compile Include="DAL\CodigosRepository.cs" />
+    <Compile Include="DAL\GruposCodigosRepository.cs" />
+    <Compile Include="DAL\EstadosRepository.cs" />
+    <Compile Include="DAL\GruposEstadosRepository.cs" />
+    <Compile Include="DAL\TiposRepository.cs" />
+    <Compile Include="DAL\GruposTiposRepository.cs" />
+    <Compile Include="DAL\OpcionesRepository.cs" />
+    <Compile Include="DAL\AgenciasContext.cs" />
+    <Compile Include="DAL\GenericRepository.cs" />
+    <Compile Include="DAL\OrigenRepository.cs" />
+    <Compile Include="DAL\SucursalesRepository.cs" />
+    <Compile Include="DAL\SuplidoresRepository.cs" />
+    <Compile Include="DAL\UnitOfWork.cs" />
+    <Compile Include="Models\Bultos.cs" />
+    <Compile Include="Models\BultosEnvios.cs" />
+    <Compile Include="Models\BultosValores.cs" />
+    <Compile Include="Models\CargosSucursales.cs" />
+    <Compile Include="Models\CargosValores.cs" />
+    <Compile Include="Models\Cargos.cs" />
+    <Compile Include="Models\CargosProducto.cs" />
+    <Compile Include="Models\CargosVarios.cs" />
+    <Compile Include="Models\Clientes.cs" />
+    <Compile Include="Models\Correspondencia.cs" />
+    <Compile Include="Models\DatosPago.cs" />
+    <Compile Include="Models\Envios.cs" />
+    <Compile Include="Models\EquivalenciaBultos.cs" />
+    <Compile Include="Models\ImportacionAgencia.cs" />
+    <Compile Include="Models\LibrasGratis.cs" />
+    <Compile Include="Models\Modulos.cs" />
+    <Compile Include="Models\PagosRecibos.cs" />
+    <Compile Include="Models\Pagos.cs" />
+    <Compile Include="Models\MovCaja.cs" />
+    <Compile Include="Models\MovCajaRecibos.cs" />
+    <Compile Include="Models\MyEnum.cs" />
+    <Compile Include="Models\Estados.cs" />
+    <Compile Include="Models\Empresas.cs" />
+    <Compile Include="Models\GruposCodigos.cs" />
+    <Compile Include="Models\GruposEstados.cs" />
+    <Compile Include="Models\GruposTipos.cs" />
+    <Compile Include="Models\NumeroFiscal.cs" />
+    <Compile Include="Models\Opciones.cs" />
+    <Compile Include="Models\Origen.cs" />
+    <Compile Include="Models\ParametrosSucursal.cs" />
+    <Compile Include="Models\Productos.cs" />
+    <Compile Include="Models\Recibos.cs" />
+    <Compile Include="Models\RecibosDet.cs" />
+    <Compile Include="Models\RegistroLibrasGratis.cs" />
+    <Compile Include="Models\Secuenciales.cs" />
+    <Compile Include="Models\Seguridad\UsuariosRoles.cs" />
+    <Compile Include="Models\Seguridad\RolesOpciones.cs" />
+    <Compile Include="Models\Seguridad\Roles.cs" />
+    <Compile Include="Models\Seguridad\UsuariosOpciones.cs" />
+    <Compile Include="Models\Seguridad\UsuariosModulos.cs" />
+    <Compile Include="Models\Seguridad\Usuarios.cs" />
+    <Compile Include="Models\Seguridad\UsuarioSucursal.cs" />
+    <Compile Include="Models\Sucursales.cs" />
+    <Compile Include="Models\Suplidores.cs" />
+    <Compile Include="Models\Codigos.cs" />
+    <Compile Include="Models\TarifaEnvio.cs" />
+    <Compile Include="Models\TarifaEnvioZona.cs" />
+    <Compile Include="Models\TarifasEspecialesValores.cs" />
+    <Compile Include="Models\TarifasEspeciales.cs" />
+    <Compile Include="Models\TasaCambio.cs" />
+    <Compile Include="Models\Telemercadeo\Ordenes.cs" />
+    <Compile Include="Models\Terminal.cs" />
+    <Compile Include="Models\Tipos.cs" />
+    <Compile Include="Models\VW\vw_bultos_valores.cs" />
+    <Compile Include="Models\VW\vw_cuadre_caja.cs" />
+    <Compile Include="Models\VW\vw_usuario_opciones.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Seg\Seguridad.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DAL\dsDatos.xsc">
+      <DependentUpon>dsDatos.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsDatos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDatos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAL\dsDatos.xss">
+      <DependentUpon>dsDatos.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsFactura.xsc">
+      <DependentUpon>dsFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsFactura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFactura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAL\dsFactura.xss">
+      <DependentUpon>dsFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsReportes.xsc">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAL\dsReportes.xss">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AgenciaEF_BO.DAL.dsFactura.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
